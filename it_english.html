@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <title>English Vocabulary Test</title>
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <a class="center" href="home.html">Home</a>
+
+    <div class="card">
+      <div class="card-header">
+        <p id="en-word"></p>
+      </div>
+      <div class="card-body">
+        <input type="text" class="form-control" placeholder="Translation" id="translation">
+      </div>
+      <div class="card-footer">
+        <div class="d-flex">
+          <div class="p-2 flex-fill">
+            <button type="button" class="btn btn-info" style='font-size:24px' disabled><i
+                class='fas fa-angle-double-left'></i></button>
+          </div>
+          <div class="p-2 flex-fill">
+            <button type="button" class="btn btn-secondary" onclick="getTranslate()" style='font-size:24px'
+              id="checkButton">Check</button>
+          </div>
+          <div class="p-2 flex-fill">
+            <button type="button" class="btn btn-success" onclick="showTranslate()" style='font-size:24px'
+              id="translateButton">Translate</button>
+          </div>
+          <div class="p-2 flex-fill">
+            <button type="button" class="btn btn-info" onclick="next()" style='font-size:24px' id="nextButton"><i
+                class='fas fa-angle-double-right'></i></button>
+          </div>
+        </div>
+
+        <div class="d-flex">
+          <div class="p-2 flex-fill" id="score">Score: 0</div>
+          <div class="p-2 flex-fill" id="words">Word: 1</div>
+          <div class="p-2 flex-fill" id="total">Total: 0</div>
+        </div>
+        <div id="status-text"></div>
+      </div>
+    </div>
+    <div id="results"></div>
+  </div>
+</body>
+
+</html>

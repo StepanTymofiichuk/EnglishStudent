@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Testing App</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <style>
+    body {
+      font-family: Helvetica, sans-serif;
+    }
+    h4,
+    p,
+    td {
+      text-align: center;
+    }
+
+    table {
+      width: 100%;
+    }
+
+    .center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card {
+      background-color: white;
+    }
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="jumbotron text-center">
+    <h1>Testing App</h1>
+    <p id="welcome"></p>
+  </div>
+
+  <div class="container">
+    <div class="card-columns">
+      <div class="card border-primary mb-3">
+        <div class="card-body" id="card-it">
+          <h4 class="card-title">It English</h4>
+          <table class="table table-borderless">
+            <tr>
+              <td>Words in db</td>
+              <td id="words-it"></td>
+            </tr>
+            <tr>
+              <td>Words in test</td>
+              <td>30</td>
+            </tr>
+          </table>
+          <div class="d-grid gap-2 col-6 mx-auto">
+            <a href="it_english.html" class="btn btn-outline-primary" role="button"><svg
+                xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-play" viewBox="0 0 16 16">
+                <path
+                  d="M10.804 8 5 4.633v6.734L10.804 8zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696l6.363 3.692z" />
+              </svg></a>
+          </div>
+        </div>
+      </div>
+      <div class="card border-info mb-3">
+        <div class="card-body">
+          <h4 class="card-title">Business English</h4>
+          <table class="table table-borderless">
+            <tr>
+              <td>Words in db</td>
+              <td id="words-business"></td>
+            </tr>
+            <tr>
+              <td>Words in test</td>
+              <td>30</td>
+            </tr>
+          </table>
+          <div class="d-grid gap-2 col-6 mx-auto">
+            <a href="business_english.html" class="btn btn-outline-info" role="button"><svg
+                xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-play" viewBox="0 0 16 16">
+                <path
+                  d="M10.804 8 5 4.633v6.734L10.804 8zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696l6.363 3.692z" />
+              </svg></a>
+          </div>
+        </div>
+      </div>
+      <div class="card border-success mb-3">
+        <div class="card-body">
+          <h4 class="card-title">Legal English</h4>
+          <table class="table table-borderless">
+            <tr>
+              <td>Words in db</td>
+              <td id="words-legal"></td>
+            </tr>
+            <tr>
+              <td>Words in test</td>
+              <td>30</td>
+            </tr>
+          </table>
+          <div class="d-grid gap-2 col-6 mx-auto">
+            <a href="legal_english.html" class="btn btn-outline-success" role="button"><svg
+                xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-play" viewBox="0 0 16 16">
+                <path
+                  d="M10.804 8 5 4.633v6.734L10.804 8zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696l6.363 3.692z" />
+              </svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    var i = 0;
+    var txt = 'Welcome to the English Vocabulary Testing App';
+    var speed = 50;
+
+    function typeWriter() {
+      if (i < txt.length) {
+        document.getElementById("welcome").innerHTML += txt.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      typeWriter();
+    });
+  </script>
+</body>
+
+</html>
